@@ -1,0 +1,10 @@
+{
+	"name": "browser-ok",
+	"version": "0.0.1",
+	"private": true,
+	"author": "Alex Karlovich",
+	"devDependencies": {
+	"grunt-node-webkit-builder": "latest",
+	"grunt-contrib-clean": ">=0.4.1"
+	}
+}
