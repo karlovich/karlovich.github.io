@@ -121,6 +121,32 @@ setTimeout(function () {
 				<section>
 					<img src="images/rake.jpg"/>
 				</section>
+				<section>
+					<h2>Realtime in HTML5</h2>
+					<ul>
+						<li>Web RTC</li>
+						<li>Server-Sent Events</li>
+						<li>WebSockets  протокол & API</li>
+					</ol>
+				</section>
+				<section>
+					<h2>WebSocket API</h2>
+					<img src="images/webs-api.jpg"/>
+				</section>
+				<section>
+					<h2>Пример</h2>
+					<pre>
+					<code>
+var socket = new WebSocket('ws://solit.nodejitsu.com');
+socket.onopen = function () {
+    console.log('Соединение открыто.');
+    socket.send(JSON.stringify({ token: 'bVfr4' }));
+};
+					</code></pre>
+				</section>
+				<section>
+					<h2>ДЕМО</h2>
+				</section>
 			</div>
 
 		</div>
