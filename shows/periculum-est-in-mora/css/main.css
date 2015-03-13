@@ -1,0 +1,7 @@
+img {
+  border: none !important;
+}
+
+.circled {
+  border-radius: 100%;
+}
