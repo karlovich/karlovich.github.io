@@ -9,12 +9,6 @@ Reveal.addEventListener( 'fragmentshown', function( event ) {
 		audioElement.volume = 0.2;
 		audioElement.play();
 	}
-
-	if(event.fragment.id === 'changes-fragment') {
-		audioElement.src="changes.mp3";
-		audioElement.volume = 0.2;
-		audioElement.play();
-	}
 });
 
 
@@ -23,6 +17,11 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
 	audioElement.currentTime = 0;
 	videoElement.pause();
 	videoElement.currentTime = 0;
+	if(event.currentSlide.id ==='changes-slide') {
+		audioElement.src="snd/changes.mp3";
+		audioElement.volume = 0.2;
+		audioElement.play();
+	}
 });
 
 var videoPlayed = false;

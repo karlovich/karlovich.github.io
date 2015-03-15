@@ -103,6 +103,10 @@
 					<img src="images/fb-chat.jpg">
 				</section>
 				<section>
+					<h2>Collaboration stuff</h2>
+					<img src="images/css-quiz.png">
+				</section>
+				<section>
 					<h4>Инструмент = Транспорт = HTTP</h4>
 					<img src="images/http.png">
 				</section>
@@ -232,18 +236,22 @@ painter.onDraw = function (data) {
 					</section>
 				</section>
 				<section>
+					<h2>Поддержка: клиенты</h2>
+					<img src="images/ws-support.png"/>
+				</section>
+				<section>
+					<h2>Поддержка: серверы</h2>
+					<img src="images/servers.jpg"/>
+				</section>
+				<section>
 					<h2>
 						<a target="_blank" href="https://github.com/karlovich/karlovich.github.io/tree/master/shows/periculum-est-in-mora/ws-workshop">ДЕМО</a>
 					</h2>
 				</section>
-				<section>
-					<h2>Серверы</h2>
-					<img src="images/servers.jpg"/>
-				</section>
-				<section>
+<!-- 				<section>
 					<h2>Traffic Charts</h2>
 					<img src="images/traffic.jpg"/>
-				</section>
+				</section> -->
 				<section>
 					<img src="images/latency-http.jpg"/>
 				</section>
@@ -268,7 +276,7 @@ painter.onDraw = function (data) {
 					<img class="fragment" style="height: 300px; position: absolute; left: 100px;" src="images/rage-guy-teeth-smile.jpg"/>
 				</section>
 				<section>
-					<h3>Создатель HTTP, 1991</h3>
+					<h3>1991</h3>
 					<img src="images/bernerslee-1991.jpg"/>
 				</section>
 				<section>
@@ -287,8 +295,8 @@ painter.onDraw = function (data) {
 						<img src="images/latency-bottleneck.jpg"/>
 					</section>
 				</section>
-				<section>
-					<img id="changes-fragment" class="fragment" src="images/changes-tsoi.jpg"/>
+				<section id="changes-slide">
+					<img src="images/changes-tsoi.jpg"/>
 				</section>
 				<section>
 					<span><b>SPeeDY</b></span><br/>
@@ -297,6 +305,12 @@ painter.onDraw = function (data) {
 				<section>
 					<h3>http://caniuse.com/#feat=spdy</h3>
 					<img src="images/spdy-caniuse.jpg"/>
+				</section>
+				<section>
+					<img src="images/rip-spdy.jpg"/>
+				</section>
+				<section>
+					<img src="images/switch-on.png"/>
 				</section>
 				<section>
 					<h3>http<span class="fragment" style="color:red;">2</span>://www.рогаикопыта.com</h3>
@@ -325,37 +339,24 @@ painter.onDraw = function (data) {
 					</section>
 				</section>
 				<section>
-					<img src="images/rip-spdy.jpg"/>
-				</section>
-				<section>
-					<img src="images/switch-on.png"/>
-				</section>
-				<section>
 					<section>
-						<h3>onliner.by</h3>
-						<img src="images/switch-on.png"/>
+						<h3>http заголовки</h3>
+						<h5>размер ~1kb</h5>
+						<img src="images/http-headers.jpg"/>
 					</section>
 					<section>
-						<h3>http2.org</h3>
-						<img src="images/switch-on.png"/>
-					</section>
-					<section>
-						<h3>SERVER-PUSH</h3>
-						<img src="images/switch-on.png"/>
+						<h3 style="position:relative">
+							<div>http компрессия (GZIP)</div>
+							<div id="beep-fragment" class="fragment cross-line">
+							</div>
+						</h3>
+						<h3 class="fragment">http2 компрессия (GZIP) - YES</h3>
 					</section>
 				</section>
 				<section>
 					<section>
-						<h3>tut.by</h3>
-						<img src="images/switch-on.png"/>
+						<h3>Мультиплексирование</h3>
 					</section>
-					<section>
-						<h3>Компрессия http-заголовков</h3>
-						<span>~1kb</span>
-						<img src="images/switch-on.png"/>
-					</section>
-				</section>
-				<section>
 					<section>
 						<h3>Спрайты</h3>
 						<img src="images/sprite-sprite.jpg"/>
@@ -366,22 +367,35 @@ painter.onDraw = function (data) {
 					</section>
 					<section>
 						<h3>Зачем?</h3>
-						<span>Уменьшить задержку</span>
+						<h4>Уменьшить задержку</h4>
+						<h4>+ обойти ограничение одновременных http-соединений</h4>
 					</section>
 					<section>
-						<h3>Multiplexing</h3>
-						<img src="images/switch-on.png"/>
+						<h3>Мультиплексирование</h3>
 					</section>
 				</section>
 				<section>
-					<pre><code>
+					<h3>SERVER PUSH</h3>
+				</section>
+				<section>
+					<section>
+						<pre><code>
 &lt;head&gt;
 	&lt;link href=&quot;theme.css&quot;&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;script src=&quot;ak.js&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
-					</code></pre>
+						</code></pre>
+					</section>
+					<section>
+						<h3>http2: Приоритет запросов</h3>
+					</section>
+				</section>
+				<section>
+					<h3>Как включить http2</h3>
+					<img class="fragment" src="images/ssl.png"/>
+					<h4 class="fragment">+ поставить расширение для веб-сервера</h4>
 				</section>
 				<section>
 					<h3>Персоналии</h3>
