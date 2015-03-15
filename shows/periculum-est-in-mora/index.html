@@ -98,7 +98,7 @@
 				</section>
 				<section>
 					<h2>Polling в жизни</h2>
-					<video src="Mom.mp4"></video>
+					<video class="fragment" id="momVideo" src="Mom.mp4"></video>
 				</section>
 				<section>
 					<h2>COMET</h2>
@@ -198,8 +198,23 @@ socket.onopen = function () {
 					<img src="images/spdy-caniuse.jpg"/>
 				</section>
 				<section>
-					<h3>DEMO</h3>
-					<a href="chrome://net-internals/#events&q=type:SPDY_SESSION%20is:active" target="_blank"/>SPDY live</a>
+					<section>
+						<h3>SPDY live demo</h3>
+					</section>
+					<section>
+						<span>chrome://net-internals/#events&q=type:SPDY_SESSION%20is:active</span>
+						<img src="images/spdy-live.jpg"/></a>
+					</section>
+					<section>
+						<div>SPDY_SESSION www.google.com:443</div>
+						<div class="fragment">SPDY_SESSION www.twitter.com:443</div>
+						<div class="fragment">SPDY_SESSION vk.com:443</div>
+						<div class="fragment">SPDY_SESSION www.facebook.com:443</div>
+						<div class="fragment" style="position: relative;">SPDY_SESSION www.odnoklassniki.ru
+							<div id="beep-fragment" class="fragment cross-line">
+							</div>
+						</div>
+					</section>
 				</section>
 				<section>
 					<img src="images/rip-spdy.jpg"/>
@@ -208,21 +223,33 @@ socket.onopen = function () {
 					<img src="images/switch-on.png"/>
 				</section>
 				<section>
-					<h3>http2</h3>
+					<h3>http<span class="fragment" style="color:red;">2</span>://www.example.com</h3>
+					<h3 class="fragment">spdy://www.example.com</h3>
+					<div id="cross" class="fragment" style="position: absolute; top: -100px; left: -100px; right: -100px; bottom: -100px; opacity: 0.7;">
+						<img style="width: 100%; height: 100%;" src="images/cross.png"/>
+					</div>
+<!-- 					<img class="fragment"  src="images/cross.png"/> -->
 				</section>
 				<section>
-					<span>spdy://www</span>
-					<span>http2://www</span>
+					<h3>Илья Григорик</h3>
+					<img style="height: 400px;" src="images/hpbncover.jpg"/><br/>
+					<a href="http://chimera.labs.oreilly.com/books/1230000000545/index.html" target="_blank"/>Online версия</a>
+				</section>
+				<section>
+					<h3>Полезные ссылки</h3>
+					<a target="_blank" href="https://github.com/http2/http2-spec/wiki/Implementations">Сайты с http2</a>
+					<br/>
+					<a target="_blank" href="https://http2.github.io">Спецификации</a>
 				</section>
 				<section>
 					<h2>Спасибо за внимание</h2>
 				</section>
 			</div>
 		</div>
-
+		<audio id="audioElement"></audio>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
-
+		<script src="js/main.js"></script>
 		<script>
 
 			// Full list of configuration options available at:
