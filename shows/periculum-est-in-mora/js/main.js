@@ -1,7 +1,8 @@
 var audioElement = document.getElementById('audioElement');
 var videoElement = document.getElementById('momVideo');
 Reveal.addEventListener( 'fragmentshown', function( event ) {
-	if(event.fragment.id === 'beep-fragment') {
+	if(event.fragment.id === 'beep-fragment' ||
+		event.fragment.id === 'cross') {
 		audioElement.src="beep.mp3";
 		audioElement.volume = 0.2;
 		audioElement.play();
