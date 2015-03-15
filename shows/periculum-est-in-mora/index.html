@@ -172,19 +172,50 @@ setInterval(function () {
 					</ol>
 				</section>
 				<section>
-					<h2>WebSocket API</h2>
-					<img src="images/webs-api.jpg"/>
-				</section>
-				<section>
-					<h2>Пример</h2>
-					<pre>
-					<code>
+					<section>
+						<h2>WebSocket API</h2>
+						<img src="images/webs-api.jpg"/>
+					</section>
+					<section>
+						<h2>Пример</h2>
+						<pre>
+						<code>
 var socket = new WebSocket('ws://solit.nodejitsu.com');
 socket.onopen = function () {
 	console.log('Соединение открыто.');
 	socket.send(JSON.stringify({ token: 'bVfr4' }));
 };
-					</code></pre>
+						</code></pre>
+					</section>
+					<section>
+						<h2>onmessage</h2>
+						<pre>
+						<code>
+socket.onmessage = function (response) {
+	var data = JSON.parse(response.data);
+	switch (data.message) {
+		case "image":
+			painter.drawImage(data.data);
+			break;
+		case "draw":
+			painter.draw(data.data);
+			break;
+	}
+};
+						</code></pre>
+					</section>
+					<section>
+						<h2>send</h2>
+						<pre>
+						<code>
+painter.onDraw = function (data) {
+	socket.send(JSON.stringify({
+		message: "draw",
+		data: data
+	}));
+};
+						</code></pre>
+					</section>
 				</section>
 				<section>
 					<section>
@@ -201,7 +232,9 @@ socket.onopen = function () {
 					</section>
 				</section>
 				<section>
-					<h2>ДЕМО</h2>
+					<h2>
+						<a target="_blank" href="https://github.com/karlovich/karlovich.github.io/tree/master/shows/periculum-est-in-mora/ws-workshop">ДЕМО</a>
+					</h2>
 				</section>
 				<section>
 					<h2>Серверы</h2>
@@ -219,6 +252,9 @@ socket.onopen = function () {
 				</section>
 				<section>
 					<img src="images/webs-logo.jpg"/>
+				</section>
+				<section>
+					<img src="images/ocean.jpg"/>
 				</section>
 				<section>
 					<img src="images/angry-1.png"/>
@@ -348,8 +384,9 @@ socket.onopen = function () {
 					</code></pre>
 				</section>
 				<section>
-					<h3>Илья Григорик</h3>
-					<img style="height: 400px;" src="images/hpbncover.jpg"/><br/>
+					<h3>Персоналии</h3>
+					<h4>Илья Григорик. Twitter: <a target="_blank" href="http://twitter.com/igrigorik">@igrigorik</a></h4>
+					<img style="height: 350px;" src="images/hpbncover.jpg"/><br/>
 					<a href="http://chimera.labs.oreilly.com/books/1230000000545/index.html" target="_blank"/>Online версия</a>
 				</section>
 				<section>
