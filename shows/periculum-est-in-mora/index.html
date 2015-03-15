@@ -49,7 +49,10 @@
 					</p>
 					<p>
 						<a href="http://solit.isoligorsk.org" target="_blank">
-							<img style="opacity:0.8;" src="images/solit-logo.jpg">
+							<img height="140px;" style="opacity:0.8;" src="images/solit-logo.jpg">
+						</a>
+						<a href="http://rollingscopes.com" target="_blank">
+							<img height="140px;" src="images/rs.svg">
 						</a>
 					</p>
 				</section>
@@ -61,20 +64,35 @@
 				<section>
 					<h2>Agenda</h2>
 					<ol style="white-space: nowrap;">
-						<li>Применение</li>
+						<li>Применение realtime</li>
 						<li>Обзор технологий и инструментов</li>
 						<li>Подробнее о веб-сокетах</li>
 						<li>HTTP 2.0 / SPDY</li>
 					</ol>
 				</section>
 				<section>
-					<h2>Биржевая и финансовая информация</h2>
-					<img src="images/fin-app.png">
+					<section>
+						<h2>Биржевая и финансовая информация</h2>
+						<img src="images/fin-app.png">
+					</section>
+					<section>
+						<h2>Успех</h2>
+						<img src="images/cash.gif">
+					</section>
+					<section>
+						<h2>Односекундное промедление</h2>
+						<img src="images/beer-cat.gif">
+					</section>
 				</section>
-
 				<section>
-					<h2>Спортивные события, ставки онлайн</h2>
-					<img src="images/sport.jpg">
+					<section>
+						<h2>Спортивные события, ставки онлайн</h2>
+						<img src="images/sport.jpg">
+					</section>
+					<section>
+						<h2>Реальная история</h2>
+						<img src="images/cheater.png">
+					</section>
 				</section>
 				<section>
 					<h2>Онлайн-игры</h2>
@@ -82,33 +100,54 @@
 				</section>
 				<section>
 					<h2>Соцсети, чаты</h2>
-					<img src="images/chats.png">
+					<img src="images/fb-chat.jpg">
 				</section>
 				<section>
-					<h2>Транспорт</h2>
+					<h4>Инструмент = Транспорт = HTTP</h4>
 					<img src="images/http.png">
 				</section>
 				<section>
-					<h2>Бесконечный GIF</h2>
-					<img src="images/indefinite-gif.gif">
-				</section>
-				<section>
-					<h2>Polling</h2>
+					<h2>Polling. 2013</h2>
 					<img src="images/polling.png">
 				</section>
 				<section>
 					<h2>Polling в жизни</h2>
-					<video class="fragment" id="momVideo" src="Mom.mp4"></video>
+					<video class="stretch"  data-autoplay id="momVideo" src="Mom.mp4"></video>
 				</section>
 				<section>
-					<h2>COMET</h2>
-					<ul>
-						<li>Бесконечный фрейм</li>
-						<li>Long Polling</li>
-						<li>Http streaming</li>
-						<li>Flash-объекты</li>
-						<li>Java-апплеты</li>
-					</ol>
+					<section>
+						<h2>COMET</h2>
+						<div class="fragment" style="position: relative">
+							<img src="images/comet.jpg"/>
+							<div id="comet-fragment" class="fragment cross" style="opacity: 0.7;position: absolute;top:0;bottom:0;right:0;left:0;">
+							<img height="100%" width="100%" src="images/cross.png"/>
+						</div>
+						</div>
+					</section>
+					<section>
+						<h2>COMET</h2>
+						<img src="images/comet-1.jpg"/>
+					</section>
+					<section>
+						<ul>
+							<li>Long Polling</li>
+							<li>Бесконечный фрейм</li>
+							<li>Http streaming</li>
+							<li>Flash-объекты</li>
+							<li>Java-апплеты</li>
+						</ol>
+					</section>
+				</section>
+				<section>
+					<section>
+						<span>1999 год. Самый первый способ передачи реалтайм-данных</span>
+						<h2 class="fragment">GIF-файл</h2>
+						<img class="fragment" src="images/wat.jpg">
+					</section>
+					<section>
+						<h2>Бесконечный GIF</h2>
+						<img src="images/indefinite-gif.gif"/>
+					</section>
 				</section>
 				<section>
 					<h2>Рубрика “No comments”</h2>
@@ -116,7 +155,7 @@
 					<code>
 &lt;meta http-equiv=&quot;refresh&quot; content=&quot;60&quot;&gt;
 
-setTimeout(function () {
+setInterval(function () {
 	location.reload();
 }, 6000);
 					</code></pre>
@@ -142,8 +181,8 @@ setTimeout(function () {
 					<code>
 var socket = new WebSocket('ws://solit.nodejitsu.com');
 socket.onopen = function () {
-    console.log('Соединение открыто.');
-    socket.send(JSON.stringify({ token: 'bVfr4' }));
+	console.log('Соединение открыто.');
+	socket.send(JSON.stringify({ token: 'bVfr4' }));
 };
 					</code></pre>
 				</section>
@@ -199,7 +238,7 @@ socket.onopen = function () {
 					</section>
 				</section>
 				<section>
-					<img src="images/changes-tsoi.jpg"/>
+					<img id="changes-fragment" class="fragment" src="images/changes-tsoi.jpg"/>
 				</section>
 				<section>
 					<span><b>SPeeDY</b></span><br/>
@@ -212,7 +251,7 @@ socket.onopen = function () {
 				<section>
 					<h3>http<span class="fragment" style="color:red;">2</span>://www.рогаикопыта.com</h3>
 					<h3 class="fragment">spdy://www.рогаикопыта.com</h3>
-					<div id="cross" class="fragment" style="position: absolute; top: -100px; left: -100px; right: -100px; bottom: -100px; opacity: 0.7;">
+					<div id="cross-http" class="fragment cross" style="position: absolute; top: -100px; left: -100px; right: -100px; bottom: -100px; opacity: 0.7;">
 						<img style="width: 100%; height: 100%;" src="images/cross.png"/>
 					</div>
 				</section>
@@ -240,6 +279,59 @@ socket.onopen = function () {
 				</section>
 				<section>
 					<img src="images/switch-on.png"/>
+				</section>
+				<section>
+					<section>
+						<h3>onliner.by</h3>
+						<img src="images/switch-on.png"/>
+					</section>
+					<section>
+						<h3>http2.org</h3>
+						<img src="images/switch-on.png"/>
+					</section>
+					<section>
+						<h3>SERVER-PUSH</h3>
+						<img src="images/switch-on.png"/>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>tut.by</h3>
+						<img src="images/switch-on.png"/>
+					</section>
+					<section>
+						<h3>Компрессия http-заголовков</h3>
+						<span>~1kb</span>
+						<img src="images/switch-on.png"/>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Спрайты</h3>
+						<img src="images/sprite-sprite.jpg"/>
+					</section>
+					<section>
+						<h3>Спрайты</h3>
+						<img src="images/sprite-flags.png"/>
+					</section>
+					<section>
+						<h3>Зачем?</h3>
+						<span>Уменьшить задержку</span>
+					</section>
+					<section>
+						<h3>Multiplexing</h3>
+						<img src="images/switch-on.png"/>
+					</section>
+				</section>
+				<section>
+					<pre><code>
+&lt;head&gt;
+	&lt;link href=&quot;theme.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;script src=&quot;ak.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+					</code></pre>
 				</section>
 				<section>
 					<h3>Илья Григорик</h3>

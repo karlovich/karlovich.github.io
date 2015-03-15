@@ -9,6 +9,16 @@ img {
 	border-radius: 100%;
 }
 
+code {
+	font-size: 28px !important;
+	line-height: 32px !important;
+	overflow: hidden !important;
+}
+
+pre {
+	box-shadow: none !important;
+}
+
 @-webkit-keyframes fadein {
 	from { opacity: 0; }
 	to { opacity: 1; }
@@ -24,7 +34,7 @@ img {
 	to { opacity: 1; }
 }
 
-#cross {
+.cross {
 	-webkit-animation: fadein 2s ease-in alternate infinite;
 	-moz-animation: fadein 2s ease-in alternate infinite;
 	animation: fadein 2s ease-in alternate infinite;

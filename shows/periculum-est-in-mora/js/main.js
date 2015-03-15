@@ -1,19 +1,29 @@
 var audioElement = document.getElementById('audioElement');
 var videoElement = document.getElementById('momVideo');
 Reveal.addEventListener( 'fragmentshown', function( event ) {
-	if(event.fragment.id === 'beep-fragment' ||
-		event.fragment.id === 'cross') {
+	if(event.fragment.id === 'beep-fragment'
+		|| event.fragment.id === 'cross-http'
+		|| event.fragment.id === 'cross-comet'
+		|| event.fragment.id === 'comet-fragment') {
 		audioElement.src="beep.mp3";
+		audioElement.volume = 0.2;
+		audioElement.play();
+	}
+
+	if(event.fragment.id === 'changes-fragment') {
+		audioElement.src="changes.mp3";
 		audioElement.volume = 0.2;
 		audioElement.play();
 	}
 });
 
-// Reveal.addEventListener( 'fragmentshown', function( event ) {
-// 	if(event.fragment.id === 'beep-fragment') {
-// 		audio.src="beep.mp3"
-// 	}
-// });
+
+Reveal.addEventListener( 'slidechanged', function( event ) {
+	audioElement.pause();
+	audioElement.currentTime = 0;
+	videoElement.pause();
+	videoElement.currentTime = 0;
+});
 
 var videoPlayed = false;
 Reveal.addEventListener( 'fragmentshown', function( event ) {
